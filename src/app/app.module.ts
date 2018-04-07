@@ -3,23 +3,54 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { nav_component } from './nav_bar.component';
+import {NavComponent} from './nav_bar.component';
 import { footer_component } from './footer.component';
-import { carrousel_component} from './carrousel.component';
-
+import { CarrouselComponent} from './carrousel.component';
+import { ProductsComponent} from './products/products.component';
+import { ROUTING } from './app.routing';
+import { ProductsService } from './products.service';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
+import { UserBuyersService } from './user-buyer.service';
+import { UserSellersService } from './user-seller.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import {InMemoryDataService} from './in-memory-data.service';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactComponent } from './contact/contact.component';
+import { ListaclientesComponent } from './listaclientes/listaclientes.component';
+import { ListaproductosComponent } from './listaproductos/listaproductos.component';
+import { OrderService } from './order.service';
+import { ChartsModule } from 'ng2-charts';
+import { PieComponent } from './pie/pie.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    nav_component,
+    NavComponent,
     footer_component,
-    carrousel_component
+    CarrouselComponent,
+    ProductsComponent,
+    MessagesComponent,
+    AboutusComponent,
+    ContactComponent,
+    ListaclientesComponent,
+    ListaproductosComponent,
+    PieComponent
+
+
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule, ROUTING, ChartsModule , HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
+
   ],
-  providers: [],
+  providers: [ProductsService, MessageService , UserBuyersService, UserSellersService, OrderService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

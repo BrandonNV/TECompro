@@ -13,7 +13,7 @@
     </div>
     <!-- header-bot -->
     <div class="col-md-4 logo_agile">
-      <h1><a href="index.html"><span>Tec</span>ompro</a></h1>
+      <h1 (click)="an()"><a><span>Tec</span>ompro</a></h1>
     </div>
     <!-- header-bot -->
     <div class="clearfix"></div>
@@ -38,12 +38,16 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav menu__list">
-              <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-              <li class=" menu__item"><a class="menu__link" href="mens.html">Productos</a></li>
-              <li class=" menu__item"><a class="menu__link" href="about.html">About us</a></li>
-              <li class=" menu__item"><a class="menu__link" href="contact.html">Contacto</a></li>
-              <li class=" menu__item"><a class="menu__link" href="productos.html">Lista de Productos</a></li>
-              <li class=" menu__item"><a class="menu__link" href="clientes.html">Lista de Clientes</a></li>
+              <li class="active menu__item menu__item--current"><a class="menu__link"
+                                                                   [routerLink]="['/CarrouselComponent']"
+                                                                   href="index.html">Home <span class="sr-only">(current)</span></a></li>
+              <li (mouseover)="an()" class=" menu__item"><a class="menu__link"  [routerLink]="['/ProductsComponent']" >Productos</a></li>
+              <li  (mouseover)="an()" class=" menu__item"><a class="menu__link"  [routerLink]="['/AboutusComponent']">About Us</a></li>
+              <li (mouseover)="an()" class=" menu__item"><a class="menu__link"  [routerLink]="['/ContactComponent']">Contacto</a></li>
+              <li (mouseover)="an()"class=" menu__item"><a class="menu__link"  [routerLink]="['/ListaclientesComponent']">Clientes V.</a></li>
+              <li (mouseover)="an()"class=" menu__item"><a class="menu__link"  [routerLink]="['/ListaproductosComponent']">Productos V.</a></li>
+              <li  (mouseover)="an()" class=" menu__item"><a class="menu__link"  [routerLink]="['/PieComponent']">Graficas</a></li>
+
             </ul>
           </div>
         </div>
@@ -135,7 +139,5 @@
   </div>
 </div>
 <!-- //Modal2 -->
-
-
 </body>
 </html>

@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './carrousel.component.html',
   styleUrls: ['./style.css']
 })
-export class carrousel_component {
+export class CarrouselComponent {
   title = 'app';
 }

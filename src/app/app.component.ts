@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {nav_component} from './nav_bar.component';
+import {NavComponent} from './nav_bar.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', ]
+  styleUrls: ['./style.css', ]
 
 })
 export class AppComponent {

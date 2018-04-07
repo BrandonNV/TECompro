@@ -1,0 +1,26 @@
+
+
+<div class="card text-center" style="width: 50rem;">
+  <div class="card-block">
+    <h2 class="card-title"><b>Usuarios compradores</b></h2>
+    <div class="container">
+
+
+      <ul class="products">
+        <li *ngFor="let buyers of UserBuyer">
+          <div class="row">
+            <div class="col-xs-6">
+              <img src="../assets/images/t1.jpg" style="width: 25%">
+            </div>
+            <div class="col-xs-6" style="text-align: left;">
+              <p>{{buyers.name}}</p>
+              <p>{{buyers.email}}</p>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
