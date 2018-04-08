@@ -23,6 +23,9 @@ import { ListaproductosComponent } from './listaproductos/listaproductos.compone
 import { OrderService } from './order.service';
 import { ChartsModule } from 'ng2-charts';
 import { PieComponent } from './pie/pie.component';
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import {CarouselModule} from 'ngx-bootstrap/carousel';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -37,12 +40,12 @@ import { PieComponent } from './pie/pie.component';
     ContactComponent,
     ListaclientesComponent,
     ListaproductosComponent,
-    PieComponent
-
-
-
+    PieComponent,
+    CarouselComponent
   ],
   imports: [
+    BsDropdownModule.forRoot(),
+    CarouselModule.forRoot(),
     BrowserModule, ROUTING, ChartsModule , HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

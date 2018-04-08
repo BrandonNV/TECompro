@@ -15,11 +15,11 @@ export class NavComponent implements OnInit{
   }
 
   an(){
-    var elements = document.querySelectorAll('h1');
-    var animations = [];
+    const elements = document.querySelectorAll('h1');
+    const animations = [];
 
     for (var i = 0, len = elements.length; i < len; ++i) {
-      var animation = elements[i].animate([
+      const animation = elements[i].animate([
         { transform: 'rotate(0deg)', offset: 0 },
         { transform: 'rotate(-12deg)', offset: .08 },
         { transform: 'rotate(270deg)', offset: .3 },
